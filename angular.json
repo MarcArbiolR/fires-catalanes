@@ -28,12 +28,7 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "outputPath": "dist/starting-app",
-            "server": "src/main.server.ts",
-            "outputMode": "server",
-            "ssr": {
-              "entry": "src/server.ts"
-            }
+            "outputPath": "dist/fires-catalanes"
           },
           "configurations": {
             "production": {
@@ -49,7 +44,8 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "/fires-catalanes/"
             },
             "development": {
               "optimization": false,
