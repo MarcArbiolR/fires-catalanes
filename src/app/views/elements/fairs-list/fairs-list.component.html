@@ -1,0 +1,35 @@
+<div class="fairs-panel">
+  <div *ngIf="!selectedRegion" class="alert alert-secondary">
+    <p>Selecciona una comarca per veure les seves fires.</p>
+  </div>
+
+  <div *ngIf="selectedRegion && fairs().length === 0" class="alert alert-info">
+    <p>No s'han trobat fires en aquesta comarca.</p>
+  </div>
+
+  <div *ngIf="selectedRegion && fairs().length > 0">
+    <h5 class="mb-3">Fires a {{ selectedRegion }}</h5>
+    <div class="fair-cards">
+      <div *ngFor="let fair of fairs()" class="card fair-card mb-3">
+        <div class="card-header d-flex justify-content-between align-items-start">
+          <h6 class="card-title mb-0">{{ fair.activityName }}</h6>
+          <button 
+            class="btn btn-sm"
+            [class.btn-danger]="isFavorite(fair)"
+            [class.btn-outline-danger]="!isFavorite(fair)"
+            (click)="toggleFavorite(fair)">
+            {{ isFavorite(fair) ? '★' : '☆' }}
+          </button>
+        </div>
+        <div class="card-body">
+          <p class="mb-2"><strong>Organitzador:</strong> {{ fair.organizerName }}</p>
+          <p class="mb-2"><strong>Municipi:</strong> {{ fair.municipalityName }}</p>
+          <p class="mb-2"><strong>Data:</strong> {{ fair.date }}</p>
+          <p class="mb-2"><strong>Lloc:</strong> {{ fair.location }}</p>
+          <p *ngIf="fair.sectorName" class="mb-2"><strong>Sector:</strong> {{ fair.sectorName }}</p>
+          <p *ngIf="fair.periodicityName" class="mb-0"><strong>Periodicitat:</strong> {{ fair.periodicityName }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="regions-panel">
+  <h5 class="mb-3">🗺️ Comarques</h5>
+  <div class="list-group">
+    <button 
+      *ngFor="let region of regions()"
+      [class.active]="selectedRegion() === region"
+      class="list-group-item list-group-item-action"
+      (click)="selectRegion(region)">
+      {{ region }}
+    </button>
+  </div>
+</div>

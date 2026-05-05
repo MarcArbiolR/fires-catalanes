@@ -1,0 +1,42 @@
+.fairs-panel {
+  padding: 1rem;
+}
+
+h5 {
+  color: #dc3545;
+  font-weight: bold;
+  border-bottom: 2px solid #dc3545;
+  padding-bottom: 0.5rem;
+}
+
+.fair-card {
+  border: 1px solid #dee2e6;
+  border-left: 4px solid #dc3545;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.fair-card:hover {
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.card-title {
+  color: #333;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.card-body p {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+}
