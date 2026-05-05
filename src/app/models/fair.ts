@@ -1,0 +1,34 @@
+export interface Fair {
+  organizerId: string;
+  organizerName: string;
+  organizerAddress: string;
+  organizerPhone: string;
+  organizerFax: string;
+  activityId: string;
+  activityName: string;
+  regionName: string;
+  regionId: string;
+  townId: string;
+  municipalityName: string;
+  municipalityId: string;
+  firstYear: string;
+  fieldId: string;
+  fieldName: string;
+  products: string;
+  email: string;
+  web: string;
+  periodicityId: string;
+  periodicityName: string;
+  sectorId: string;
+  sectorName: string;
+  location: string;
+  calendarsId: string;
+  nexhibitors: number | null;
+  nvisitors: number | null;
+  surface: number | null;
+  date: string;
+  endDate: string;
+  iniDate: string;
+  images: any[];
+  description: any[];
+}
