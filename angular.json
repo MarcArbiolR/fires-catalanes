@@ -28,6 +28,7 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
+            "outputPath": "dist/starting-app",
             "server": "src/main.server.ts",
             "outputMode": "server",
             "ssr": {
@@ -72,6 +73,9 @@
         },
         "test": {
           "builder": "@angular/build:unit-test"
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
