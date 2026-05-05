@@ -1,0 +1,11 @@
+<div class="container-fluid py-4">
+  <h1 class="mb-4">🔍 Explora les Fires Catalanes</h1>
+  <div class="row">
+    <div class="col-lg-4">
+      <app-regions-list (regionSelected)="onRegionSelected($event)"></app-regions-list>
+    </div>
+    <div class="col-lg-8">
+      <app-fairs-list [selectedRegion]="selectedRegion()"></app-fairs-list>
+    </div>
+  </div>
+</div>

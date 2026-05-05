@@ -1,0 +1,8 @@
+h1 {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.table-danger {
+  background-color: #f8d7da;
+}
